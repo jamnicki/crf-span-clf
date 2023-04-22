@@ -1,0 +1,5 @@
+outs:
+- md5: 1468d1ee0f6ce1a747978a90f3aee2b4.dir
+  size: 707471243
+  nfiles: 19
+  path: pl_sc_gpu_eff.spacy
