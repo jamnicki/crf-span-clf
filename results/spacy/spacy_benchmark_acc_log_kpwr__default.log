@@ -1,0 +1,94 @@
+(pnauk) jedrz@jj-win:~/_WSL_Docs/crf-span-clf$ date
+Mon Apr 24 01:43:53 CEST 2023
+(pnauk) jedrz@jj-win:~/_WSL_Docs/crf-span-clf$ python -m spacy benchmark accuracy data/models/pl_spancat_acc_kpwr/model-best/ data/spacy_kpwr/kpwr_spancat_test.spacy --output results/spacy/benchmark_acc_kpwr_test_metrics.json --gpu-id 0 --displacy-path results/spacy/benchmark_acc_kpwr_test_displacy/
+ℹ Using GPU: 0
+
+================================== Results ==================================
+
+TOK      100.00
+SPAN P   79.01
+SPAN R   66.52
+SPAN F   72.23
+SPEED    3091
+
+
+============================== SPANS (per type) ==============================
+
+                                 P        R        F
+nam_liv_person               89.23    82.69    85.84
+nam_loc_gpe_admin2           85.71    70.59    77.42
+nam_loc_gpe_city             78.76    80.91    79.82
+nam_org_institution          68.22    53.28    59.84
+nam_adj                      52.63    40.00    45.45
+nam_pro_title_document       80.77    44.68    57.53
+nam_loc_gpe_country          92.31    90.32    91.30
+nam_oth_tech                 84.62    33.33    47.83
+nam_org_group_team           86.75    86.75    86.75
+nam_eve_human_sport          75.00    64.86    69.57
+nam_loc_land_island         100.00    12.50    22.22
+nam_fac_goe                  57.14    44.44    50.00
+nam_loc_hydronym_river       88.24    65.22    75.00
+nam_loc_historical_region    45.45    38.46    41.67
+nam_adj_city                 83.33    88.24    85.71
+nam_loc_gpe_admin1           84.62    80.49    82.50
+nam_pro_award                 0.00     0.00     0.00
+nam_adj_country              78.82    79.76    79.29
+nam_org_political_party      91.89    89.47    90.67
+nam_fac_goe_stop              0.00     0.00     0.00
+nam_fac_road                 84.21    69.57    76.19
+nam_org_company              71.43    57.14    63.49
+nam_pro_brand                41.67    21.74    28.57
+nam_loc_hydronym_ocean        0.00     0.00     0.00
+nam_eve_human_cultural      100.00     7.14    13.33
+nam_adj_person                0.00     0.00     0.00
+nam_org_organization         77.17    60.17    67.62
+nam_oth_currency             96.00    96.00    96.00
+nam_fac_system                0.00     0.00     0.00
+nam_pro_media_periodic       73.08    50.00    59.37
+nam_oth_data_format           0.00     0.00     0.00
+nam_pro_software             67.57    54.35    60.24
+nam_org_nation               87.88    61.70    72.50
+nam_loc_hydronym_sea          0.00     0.00     0.00
+nam_pro_title                57.14    28.57    38.10
+nam_pro_media_tv             25.00    33.33    28.57
+nam_oth                      46.67    53.85    50.00
+nam_loc_gpe_admin3           94.12    64.00    76.19
+nam_org_group_band           28.57    50.00    36.36
+nam_loc_hydronym_lake       100.00   100.00   100.00
+nam_liv_god                  90.00    64.29    75.00
+nam_loc_gpe_district        100.00    40.00    57.14
+nam_org_group                66.67    18.18    28.57
+nam_pro_model_car           100.00    66.67    80.00
+nam_eve_human                42.86    23.68    30.51
+nam_liv_habitant             22.22    66.67    33.33
+nam_eve_human_holiday        66.67    50.00    57.14
+nam_pro_media_web            21.43    48.00    29.63
+nam_loc_land_continent       77.78   100.00    87.50
+nam_pro_title_book            0.00     0.00     0.00
+nam_oth_license              80.00    66.67    72.73
+nam_org_organization_sub      0.00     0.00     0.00
+nam_oth_www                   0.00     0.00     0.00
+nam_loc_land_region          50.00    66.67    57.14
+nam_num_house                 0.00     0.00     0.00
+nam_liv_animal                0.00     0.00     0.00
+nam_loc_gpe_subdivision      75.00    42.86    54.55
+nam_pro_title_tv              0.00     0.00     0.00
+nam_pro_vehicle               0.00     0.00     0.00
+nam_eve                     100.00   100.00   100.00
+nam_fac_bridge                0.00     0.00     0.00
+nam_loc_country_region        0.00     0.00     0.00
+nam_oth_position              0.00     0.00     0.00
+nam_loc_land_mountain        66.67    33.33    44.44
+nam_fac_square                0.00     0.00     0.00
+nam_loc                       0.00     0.00     0.00
+nam_pro_media_radio           0.00     0.00     0.00
+nam_pro_media               100.00    33.33    50.00
+nam_fac_park                  0.00     0.00     0.00
+nam_loc_land                  0.00     0.00     0.00
+nam_pro_title_song            0.00     0.00     0.00
+
+✔ Generated 25 parses as HTML
+results/spacy/benchmark_acc_kpwr_test_displacy
+✔ Saved results to
+results/spacy/benchmark_acc_kpwr_test_metrics.json
+(pnauk) jedrz@jj-win:~/_WSL_Docs/crf-span-clf$

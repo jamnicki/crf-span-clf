@@ -1,0 +1,67 @@
+(pnauk) jedrz@jj-win:~/_WSL_Docs/crf-span-clf$ export _KPWR_DIR=data/spacy_kpwr
+(pnauk) jedrz@jj-win:~/_WSL_Docs/crf-span-clf$
+(pnauk) jedrz@jj-win:~/_WSL_Docs/crf-span-clf$ date
+Mon Apr 24 00:42:35 CEST 2023
+(pnauk) jedrz@jj-win:~/_WSL_Docs/crf-span-clf$ python -m spacy train ./config/spacy/pl_spancat_acc_gpu.cfg --output ./data/models/pl_spancat_acc_kpwr --paths.train $_KPWR_DIR/kpwr_spancat_train.spacy --paths.dev $_KPWR_DIR/kpwr_spancat_val.spacy --gpu-id 0 --verbose
+[2023-04-24 00:42:51,165] [DEBUG] Config overrides from CLI: ['paths.train', 'paths.dev']
+ℹ Saving to output directory: data/models/pl_spancat_acc_kpwr
+ℹ Using GPU: 0
+
+=========================== Initializing pipeline ===========================
+[2023-04-24 00:42:52,125] [INFO] Set up nlp object from config
+[2023-04-24 00:42:52,133] [DEBUG] Loading corpus from path: data/spacy_kpwr/kpwr_spancat_val.spacy
+[2023-04-24 00:42:52,134] [DEBUG] Loading corpus from path: data/spacy_kpwr/kpwr_spancat_train.spacy
+[2023-04-24 00:42:52,134] [INFO] Pipeline: ['transformer', 'spancat']
+[2023-04-24 00:42:52,136] [INFO] Created vocabulary
+[2023-04-24 00:42:52,137] [INFO] Finished initializing nlp object
+Some weights of the model checkpoint at dkleczek/bert-base-polish-cased-v1 were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.decoder.bias', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializinga BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[2023-04-24 00:43:00,096] [INFO] Initialized pipeline components: ['transformer', 'spancat']
+✔ Initialized pipeline
+
+============================= Training pipeline =============================
+[2023-04-24 00:43:00,104] [DEBUG] Loading corpus from path: data/spacy_kpwr/kpwr_spancat_val.spacy
+[2023-04-24 00:43:00,104] [DEBUG] Loading corpus from path: data/spacy_kpwr/kpwr_spancat_train.spacy
+[2023-04-24 00:43:00,135] [DEBUG] Removed existing output directory: data/models/pl_spancat_acc_kpwr/model-best
+[2023-04-24 00:43:00,167] [DEBUG] Removed existing output directory: data/models/pl_spancat_acc_kpwr/model-last
+ℹ Pipeline: ['transformer', 'spancat']
+ℹ Initial learn rate: 0.0
+E    #       LOSS TRANS...  LOSS SPANCAT  SPANS_SC_F  SPANS_SC_P  SPANS_SC_R  SCORE
+---  ------  -------------  ------------  ----------  ----------  ----------  ------
+  0       0        2269.41      11551.88        0.07        0.03       41.23    0.00
+  2     200      519406.77    5088168.71        0.00        0.00        0.00    0.00
+  4     400        1987.86     924243.31        0.00        0.00        0.00    0.00
+  6     600          62.27     105874.17       25.49       84.28       15.01    0.25
+  8     800           8.71      22700.30       26.86       86.93       15.89    0.27
+ 10    1000           6.79      17074.60       36.36       76.66       23.83    0.36
+ 12    1200          11.45      14163.37       44.34       86.21       29.84    0.44
+ 14    1400          22.25      12415.28       53.57       75.52       41.51    0.54
+ 16    1600          35.73       9851.03       58.35       85.26       44.35    0.58
+ 19    1800          34.38       7953.15       63.01       81.44       51.38    0.63
+ 21    2000          22.05       6610.50       65.08       82.20       53.86    0.65
+ 23    2200          23.97       5722.54       66.61       80.63       56.75    0.67
+ 25    2400          18.05       4907.35       67.06       77.13       59.32    0.67
+ 27    2600          16.83       4210.64       68.83       80.86       59.92    0.69
+ 29    2800          15.24       3990.89       69.26       80.23       60.93    0.69
+ 31    3000          15.43       3437.31       68.33       79.82       59.73    0.68
+ 33    3200          11.13       3071.42       68.90       78.35       61.48    0.69
+ 35    3400          15.06       2730.12       69.98       80.19       62.08    0.70
+ 38    3600          13.45       2414.94       70.48       80.82       62.49    0.70
+ 40    3800           9.39       2216.00       70.38       80.25       62.67    0.70
+ 42    4000           8.20       1993.95       71.82       81.43       64.23    0.72
+ 44    4200           6.68       1838.52       71.39       81.29       63.64    0.71
+ 46    4400           8.09       1700.64       71.68       80.30       64.74    0.72
+ 48    4600           5.78       1491.33       70.39       78.60       63.73    0.70
+ 50    4800           4.66       1423.93       72.20       79.78       65.93    0.72
+ 52    5000           4.07       1361.97       71.48       78.96       65.29    0.71
+ 54    5200           3.19       1308.33       71.62       79.57       65.11    0.72
+ 57    5400           2.94       1206.90       71.37       79.37       64.83    0.71
+ 59    5600           2.66       1172.07       71.47       79.56       64.88    0.71
+ 61    5800           2.62       1163.98       71.85       79.47       65.56    0.72
+ 63    6000           2.65       1139.51       71.75       80.12       64.97    0.72
+ 65    6200           2.41       1091.61       72.13       78.57       66.67    0.72
+ 67    6400           2.50       1061.28       71.57       78.40       65.84    0.72
+✔ Saved pipeline to output directory
+data/models/pl_spancat_acc_kpwr/model-last
+(pnauk) jedrz@jj-win:~/_WSL_Docs/crf-span-clf$
