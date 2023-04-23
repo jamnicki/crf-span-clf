@@ -3,6 +3,6 @@ Source: https://huggingface.co/datasets/clarin-pl/kpwr-ner
 Validation and test sets represent dataset's 'test' split (50-50).
 Records without any 'ner' labels were omitted.
 
-Train docs: 263 (78.98%, 730 tokens)
-Validation docs: 35 (10.51%, 87 tokens)
-Test docs: 35 (10.51%, 77 tokens)
+Train docs: 6635 (75.17%, 128603 tokens)
+Validation docs: 1096 (12.42%, 22743 tokens)
+Test docs: 1096 (12.42%, 22824 tokens)

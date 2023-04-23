@@ -31,7 +31,7 @@ def count_tokens(docbin, vocab):
 
 
 def contains_any_label(record):
-    return all([True if label != 160 else False for label in record["ner"]])
+    return any([True if label != 160 else False for label in record["ner"]])
 
 
 def main():

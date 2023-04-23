@@ -1,4 +1,4 @@
 outs:
-- md5: c8c370a818ba84240d4023fcbff16e3f
-  size: 20756
+- md5: 06901e42299cce723279840be35eea66
+  size: 1653659
   path: kpwr_spancat_train.spacy
