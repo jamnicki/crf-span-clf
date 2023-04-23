@@ -1,4 +1,4 @@
 outs:
-- md5: ba00e8f47982ca6d3c49e73d59e82436
-  size: 467986
+- md5: 01df73c23cb200e1ce48caffeb3b76d1
+  size: 3423
   path: kpwr_spancat_val.spacy

@@ -1,8 +1,8 @@
 KPWR dataset in Spacy's DocBin format.
 Source: https://huggingface.co/datasets/clarin-pl/kpwr-ner 
-Validation and test sets represent dataset's 'test' split (50-50)
-Records with empty 'ner' field were omitted.
+Validation and test sets represent dataset's 'test' split (50-50).
+Records without any 'ner' labels were omitted.
 
-Train docs: 13959 (76.35%)
-Validation docs: 2161 (11.82%)
-Test docs: 2162 (11.83%)
+Train docs: 263 (78.98%, 730 tokens)
+Validation docs: 35 (10.51%, 87 tokens)
+Test docs: 35 (10.51%, 77 tokens)
