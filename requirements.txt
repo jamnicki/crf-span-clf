@@ -1,0 +1,14 @@
+setuptools
+wheel
+spacy[cuda-autodetect,transformers,lookups]
+
+argilla
+datasets
+dvc[gdrive]
+
+tqdm
+ipywidgets
+ipykernel
+
+black
+isort
