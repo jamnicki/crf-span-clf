@@ -9,6 +9,7 @@ dvc[gdrive]
 tqdm
 ipywidgets
 ipykernel
+matplotlib
 
 black
 isort
